@@ -19,6 +19,11 @@ namespace Users_Api.Controllers
         {
             _userRepo = userRepo;
         }
+
+        /// <summary>
+        /// GetUsers method get All users from database
+        /// </summary>
+        /// <returns>Users</returns>
         [SwaggerOperation(Summary ="This endpoint get All Users from database",
             Description ="You can get more information just try")]
         [SwaggerResponse(200 , "Everything works well")]
@@ -29,6 +34,12 @@ namespace Users_Api.Controllers
         {
             return await _userRepo.GetAllAsync();
         }
+
+        /// <summary>
+        /// GetUser method get only one user from database
+        /// </summary>
+        /// <param name="Id">type of Id is Guid </param>
+        /// <returns>Single User</returns>
         [HttpGet("{Id}")]
         [SwaggerOperation(Summary = "This endpoint get single User from database",
          Description = "In this endpoint you can get detailed information about User")]
@@ -45,6 +56,11 @@ namespace Users_Api.Controllers
             }
             return user;
         }
+
+        /// <summary>
+        /// PostUser method add new User to Users Collection in Database
+        /// </summary>
+        /// <param name="user">type of user param is User </param>
         [SwaggerOperation(Summary = "This endpoint posted User to database",
          Description = "You have to add user information given parameters")]
         [SwaggerResponse(200, "The new user has been successfully added to the database")]
@@ -57,8 +73,12 @@ namespace Users_Api.Controllers
             return CreatedAtAction(nameof(GetUsers), new { id = user.Id }, newUser);
         }
 
-
-        [SwaggerOperation(Summary = "This endpoint modifies the current User from the database",
+        /// <summary>
+        /// UpdateUser method modifies the current User in Database
+        /// </summary>
+        /// <param name="Id">type of Id is Guid </param>
+        /// <param name="user">type of user param is User </param>
+        [SwaggerOperation(Summary = "This endpoint modifies the current User in database",
          Description = "You must enter the id and information of the current user")]
         [SwaggerResponse(200, "The new user has been successfully updated")]
         [SwaggerResponse(400, "Bad Request")]
@@ -74,7 +94,10 @@ namespace Users_Api.Controllers
             return Content("The new user has been successfully updated");
         }
 
-
+        /// <summary>
+        /// DeleteUser method search user from Users Collection with given Id and delete user from it
+        /// </summary>
+        /// <param name="Id">type of Id is Guid </param>
         [SwaggerOperation(Summary = "This endpoint delete current user from the database",
          Description = "You must enter the id of the current user")]
         [SwaggerResponse(200, "The User has been successfully deleted from the database")]
