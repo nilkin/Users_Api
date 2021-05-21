@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\n_ilkin\\source\\repos\\Users_Api\\Users_Api.csproj": {}
+    "C:\\Users\\n_ilkin\\OneDrive\\Desktop\\my Code\\Users_Api\\Users_Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\n_ilkin\\source\\repos\\Users_Api\\Users_Api.csproj": {
+    "C:\\Users\\n_ilkin\\OneDrive\\Desktop\\my Code\\Users_Api\\Users_Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\n_ilkin\\source\\repos\\Users_Api\\Users_Api.csproj",
+        "projectUniqueName": "C:\\Users\\n_ilkin\\OneDrive\\Desktop\\my Code\\Users_Api\\Users_Api.csproj",
         "projectName": "Users_Api",
-        "projectPath": "C:\\Users\\n_ilkin\\source\\repos\\Users_Api\\Users_Api.csproj",
+        "projectPath": "C:\\Users\\n_ilkin\\OneDrive\\Desktop\\my Code\\Users_Api\\Users_Api.csproj",
         "packagesPath": "C:\\Users\\n_ilkin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\n_ilkin\\source\\repos\\Users_Api\\obj\\",
+        "outputPath": "C:\\Users\\n_ilkin\\OneDrive\\Desktop\\my Code\\Users_Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -54,6 +54,10 @@
               "version": "[5.0.6, )"
             },
             "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
               "target": "Package",
               "version": "[6.1.4, )"
             }

@@ -35,7 +35,13 @@ namespace Users_Api
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Users_Api", Version = "v1" });
+                c.EnableAnnotations();
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Users ",
+                    Version = "v1",
+                    Description = "Users Api Task for NextSale "
+                });
             });
         }
 
